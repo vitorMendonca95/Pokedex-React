@@ -34,7 +34,7 @@ class App extends Component{
                 {this.state.pokemon.map((item, index) => {
                     return(
                         <article key = {index}>                
-                            <Pokemon id = {index} />                                                                                                                                    
+                            <Pokemon id = {index} name = {item.name}/>                                                                                                                                    
                         </article>
                     )
                 })

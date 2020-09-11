@@ -7,7 +7,7 @@ class Pokemon extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pokeName: '',
+            pokeName: this.props.name,
             pokeSprite : '',
             pokeWeight: null,
             pokeHeight: null,
@@ -28,7 +28,6 @@ class Pokemon extends Component {
             state.pokeWeight = json.weight;
             state.pokeHeight = json.height;
             state.pokeType = json.types[0].type.name;
-            state.pokeName = json.name;
 
             this.setState(state);
         });
