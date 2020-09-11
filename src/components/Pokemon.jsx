@@ -16,6 +16,8 @@ class Pokemon extends Component {
         }
 
         this.showDetailsAction = this.showDetailsAction.bind(this);
+        this.converterDecToMetre = this.converterDecToMetre.bind(this);
+        this.converterHgToKg = this.converterDecToMetre.bind(this);
     }
 
     componentDidMount(){
@@ -46,6 +48,14 @@ class Pokemon extends Component {
         
     }
 
+    converterDecToMetre(height){
+        return height / 10;
+    }
+
+    converterHgToKg(weight){
+        return weight / 10;
+    }
+
     render(){
         return(
         <div className = "card">
@@ -62,8 +72,8 @@ class Pokemon extends Component {
                     <tbody>
                         <tr>
                             <td>{this.state.pokeType}</td>
-                            <td>{this.state.pokeHeight}</td>
-                            <td>{this.state.pokeWeight}</td>              
+                            <td>{this.converterDecToMetre(this.state.pokeHeight)}m</td>
+                            <td>{this.converterHgToKg(this.state.pokeWeight)}kg</td>              
                         </tr>
                     </tbody>
                 </table>
