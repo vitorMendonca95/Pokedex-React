@@ -22,7 +22,7 @@ class App extends Component{
         .then((json) => {
             let state = this.state;
             state.pokemon = json.results;
-            this.setState(state);
+            this.setState(states);
             
         });
 
